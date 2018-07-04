@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="archiver@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="archiver">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="agri"/>
+    <schema id="4" parent="1" name="aigles"/>
+    <schema id="5" parent="1" name="ci_bootstrap_3"/>
+    <schema id="6" parent="1" name="clientimdb"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="pbreakers"/>
+    <schema id="10" parent="1" name="pbsite"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="phpmyadmin"/>
+    <schema id="13" parent="1" name="realtime"/>
+    <schema id="14" parent="1" name="serverimdb"/>
+    <schema id="15" parent="1" name="startblog"/>
+    <schema id="16" parent="1" name="test"/>
+    <table id="17" parent="2" name="categorie"/>
+    <table id="18" parent="2" name="domaine"/>
+    <table id="19" parent="2" name="fichiers"/>
+    <table id="20" parent="2" name="service"/>
+    <table id="21" parent="2" name="users"/>
+    <column id="22" parent="17" name="id_cat">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="17" name="nom_cat">
+      <Position>2</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="17" name="details">
+      <Position>3</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_cat</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="18" name="id_dom">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="18" name="nom_domaine">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="18" name="details">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="29" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_dom</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="19" name="id_fic">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="19" name="nom_fic">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="19" name="details">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="19" name="date_entre">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="19" name="id_user">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="19" name="id_domaine">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="19" name="date_modifie">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="37" parent="20" name="id_serv">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="38" parent="20" name="nom_serv">
+      <Position>2</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="20" name="details">
+      <Position>3</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_serv</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="21" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="21" name="prenom">
+      <Position>3</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="21" name="id_cat">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="21" name="id_serv">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="21" name="details">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="21" name="login">
+      <Position>7</Position>
+      <DataType>varchar(75)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="21" name="mdp">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="49" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
